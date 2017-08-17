@@ -17,9 +17,9 @@ You definitely shouldn't.
 For just over 5 hours, as the shadow of the moon dances across the United States, the contract will be available to receive contributions. Details of the exact start and end time, as well as contract address are below:
 
 ```
-Token Sale Start Time: `Aug 21, 2017 at 15:46:50 UTC`
-Token Sale End Time: `Aug 21, 2017 at 21:04:21 UTC`
-Token Sale Duration: `5 hours, 17 minutes, 31 seconds`
+Token Sale Start Time: August 21, 2017 at 15:46:50 UTC
+Token Sale End Time: August 21, 2017 at 21:04:21 UTC
+Token Sale Duration: 5 hours, 17 minutes, 31 seconds
 ```
 
 ## Contract Address: `0x51036B0029e95EcBcE4784df0A87987d1092eC7D`
