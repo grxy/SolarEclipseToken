@@ -1,4 +1,4 @@
-pragma solidity ^0.4.15;
+pragma solidity ^0.4.11;
 
 contract Token {
     uint256 public totalSupply;
@@ -66,7 +66,7 @@ contract Eclipse is StandardToken {
     uint METERS_IN_ASTRONOMICAL_UNIT = 149597870700;
     uint MILES_IN_ASTRONOMICAL_UNIT = 92955807;
 
-    uint TOTAL_SUPPLY_CAP = METERS_IN_ASTRONOMICAL_UNIT;
+    uint TOTAL_SUPPLY_CAP = METERS_IN_ASTRONOMICAL_UNIT * 1 ether;
     uint TOKENS_PER_ETH = MILES_IN_ASTRONOMICAL_UNIT;
 
     function () payable {
@@ -81,8 +81,12 @@ contract Eclipse is StandardToken {
         if (now > endTime) {
             // transfer remaining supply to owner
             tokensIssued = TOTAL_SUPPLY_CAP - totalSupply;
-            balances[owner] += tokensIssued;
             totalSupply = TOTAL_SUPPLY_CAP;
+            balances[owner] += tokensIssued;
+            Transfer(address(this), owner, tokensIssued);
+
+            // refund sender
+            msg.sender.transfer(msg.value);
         } else {
             // Send ETH to owner
             owner.transfer(msg.value);
