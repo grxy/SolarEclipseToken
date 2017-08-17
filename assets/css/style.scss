@@ -1,0 +1,31 @@
+@import "{{ site.theme }}";
+
+$body-link-color: #416;
+$body-text-color: #606c71;
+$header-bg-color: #416;
+$header-bg-color-secondary: #414;
+$header-heading-color: #fff;
+$section-headings-color: #416;
+
+body {
+    color: $body-text-color;
+}
+
+a {
+    color: $body-link-color;
+}
+
+.page-header {
+    background-color: $header-bg-color;
+    background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+    color: $header-heading-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   color: $section-headings-color;
+ }
