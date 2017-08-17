@@ -56,49 +56,46 @@ contract StandardToken is Token {
 
 contract SolarEclipseToken is StandardToken {
     uint8 public decimals = 18;
-    string public name = '2017 Solar Eclipse Token';
+    string public name = 'Solar Eclipse Token';
     address owner;
-    string public symbol = 'ECL17';
+    string public symbol = 'SET';
 
     uint startTime = 1503330410; // Aug 21, 2017 at 15:46:50 UTC
     uint endTime = 1503349461; // Aug 21, 2017 at 21:04:21 UTC
 
-    uint metersInAU = 149597870700;
-    uint milesInAU = 92955807;
+    uint metersInAstronomicalUnit = 149597870700;
+    uint milesInAstronomicalUnit = 92955807;
+    uint speedOfLightInMetersPerSecond = 299792458;
 
-    uint public totalSupplyCap = metersInAU * 1 ether;
-    uint public tokensPerETH = milesInAU;
+    uint public totalSupplyCap = metersInAstronomicalUnit * 1 ether;
+    uint public tokensPerETH = milesInAstronomicalUnit;
+
+    uint public ownerTokens = speedOfLightInMetersPerSecond * 10 ether;
+
+    function ownerWithdraw() {
+        if (msg.sender != owner) revert(); // revert if not owner
+
+        owner.transfer(this.balance); // send contract balance to owner
+    }
 
     function () payable {
         if (now < startTime) revert(); // revert if solar eclipse has not started
+        if (now > endTime) revert(); // revert if solar eclipse has ended
         if (totalSupply >= totalSupplyCap) revert(); // revert if totalSupplyCap has been exhausted
 
-        uint tokensIssued;
+        uint tokensIssued = msg.value * tokensPerETH;
 
-        if (now > endTime) { // if token sale ended
-            tokensIssued = totalSupplyCap - totalSupply;
-            totalSupply = totalSupplyCap;
-            balances[owner] += tokensIssued;
-            Transfer(address(this), owner, tokensIssued); // transfer remaining supply to owner
-
-            msg.sender.transfer(msg.value); // refund sender
-        } else {
-            owner.transfer(msg.value); // send ETH to owner
-
-            tokensIssued = msg.value * tokensPerETH;
-
-            if (totalSupply + tokensIssued > totalSupplyCap) {
-                tokensIssued = totalSupplyCap - totalSupply; // ensure supply is capped
-            }
-
-            totalSupply += tokensIssued;
-            balances[msg.sender] += tokensIssued;
-            Transfer(address(this), msg.sender, tokensIssued); // transfer tokens to contributor
+        if (totalSupply + tokensIssued > totalSupplyCap) {
+            tokensIssued = totalSupplyCap - totalSupply; // ensure supply is capped
         }
+
+        totalSupply += tokensIssued;
+        balances[msg.sender] += tokensIssued; // transfer tokens to contributor
     }
 
     function SolarEclipseToken() {
         owner = msg.sender;
-        totalSupply = 0;
+        totalSupply = ownerTokens;
+        balances[owner] = ownerTokens;
     }
 }
