@@ -59,7 +59,6 @@ contract Eclipse is StandardToken {
     string public name = 'Eclipse';
     address owner;
     string public symbol = 'ECL';
-    uint256 public totalContribution = 0;
 
     uint startTime = 1503330410; // Aug 21, 2017 at 15:46:50 UTC
     uint endTime = 1503349461; // Aug 21, 2017 at 21:04:21 UTC
