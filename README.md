@@ -1,3 +1,6 @@
+---
+title: null
+---
 ## What is a Solar Eclipse Token?
 It's the first-of-its-kind token based Sol-ly on a solar event. Like the 2017 solar eclipse, this offering is
 a once-in-a-lifetime chance to invest in something that is as empty and vast as space itself.
