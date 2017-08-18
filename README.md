@@ -1,10 +1,10 @@
-<!-- Trying to remove page title -->
+<!-- -->
 
 ## What is a Solar Eclipse Token?
 It's the first-of-its-kind token based Sol-ly on a solar event. Like the 2017 solar eclipse, this offering is
 a once-in-a-lifetime chance to invest in something that is as empty and vast as space itself.
 
-## What Makes This ICO So Special?
+## What Makes This ICO so Special?
 It's the only ICO where you can get an ERC20 token that was minted during the 2017 solar eclipse.
 This ICO will never happen again!
 
@@ -50,4 +50,4 @@ Of course! That would make me extremely happy!
 I hope that some of you will make my dreams of a free ether beer or two come true!
 
 ### Any Last Suggestions?
-Get outside and enjoy the solar eclipse!
+Get outside and enjoy the solar eclipse, and make sure to use protection!
