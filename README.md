@@ -1,5 +1,5 @@
-## What is Solar Eclipse Token?
-It's the first-of-its-kind token offering based Sol-ly on a solar event. Like the 2017 solar eclipse, this offering is
+## What is a Solar Eclipse Token?
+It's the first-of-its-kind token based Sol-ly on a solar event. Like the 2017 solar eclipse, this offering is
 a once-in-a-lifetime chance to invest in something that is as empty and vast as space itself.
 
 ## What Makes This ICO So Special?
@@ -30,7 +30,7 @@ Token Sale Duration: 5 hours, 17 minutes, 31 seconds
 ### Is This Legit?
 Absolutely! Your ETH is going to a random web citizen and you're getting some awesome pointless tokens in return!
 
-## What Can I Do With Solar Eclipse Tokens?
+### What Can I Do With Solar Eclipse Tokens?
 You can send, receive, and HODL just like any other ERC20 token out there, but that's pretty much it.
 
 ### Is There a Limit on the Number of Solar Eclipse Tokens That Can Be Minted?
