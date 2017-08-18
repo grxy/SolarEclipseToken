@@ -22,6 +22,10 @@ a {
     background-color: $header-bg-color;
     background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
     color: $header-heading-color;
+
+    .project-address {
+        overflow-x: hidden;
+    }
 }
 
 .main-content {
@@ -29,7 +33,12 @@ a {
         color: $section-headings-color;
     }
 
-    h2 code.highlighter-rouge {
-        font-size: 24px;
+    #contract-address-0x51036b0029e95ecbce4784df0a87987d1092ec7d {
+        overflow-x: scroll;
+
+        code {
+            font-size: 24px;
+            white-space: nowrap;
+        }
     }
 }
