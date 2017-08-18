@@ -3,12 +3,16 @@
 
 @import "{{ site.theme }}";
 
+$body-bg-color: #202;
 $body-link-color: #416;
-$body-text-color: #606c71;
-$header-bg-color: #416;
-$header-bg-color-secondary: #414;
+$body-text-color: #bbb;
+$border-color: #868;
+$code-bg-color: #424;
+$code-text-color: #fff;
+$header-bg-color: #504;
+$header-bg-color-secondary: #405;
 $header-heading-color: #fff;
-$section-headings-color: #416;
+$section-headings-color: #fff;
 
 body {
     color: $body-text-color;
@@ -41,4 +45,19 @@ a {
             white-space: nowrap;
         }
     }
+
+    code {
+        color: $code-text-color;
+        background-color: $code-bg-color;
+    }
+
+      pre {
+        color: $code-text-color;
+        background-color: $code-bg-color;
+        border: solid 1px $border-color;
+
+        > code {
+          color: $code-text-color;
+        }
+      }
 }
