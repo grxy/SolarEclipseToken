@@ -28,6 +28,11 @@ a {
     background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
     color: $header-heading-color;
 
+    img {
+        margin-bottom: 20px;
+        max-width: 100px;
+    }
+
     .project-address {
         overflow-x: scroll;
     }
